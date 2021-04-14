@@ -10,7 +10,7 @@ public class Venta {
     int fechaVenta;
 
     public static void main(String[] args){
-            Estado sinUso = new Nueva();
+            EstadoPrenda sinUso = new Nueva();
             Prenda pantalonCorto = new Pantalon(5000,sinUso);
             Prenda saquitoFacha = new Saco(15000,sinUso);
             Prenda camisaPriv = new Camisa(10000,sinUso);

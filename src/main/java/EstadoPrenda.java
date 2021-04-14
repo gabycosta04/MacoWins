@@ -1,9 +1,9 @@
-public interface Estado{
+public interface EstadoPrenda{
     int precioFinal(int precio);
 }
 
 
-class Promocion implements Estado{
+class Promocion implements EstadoPrenda{
     int valorFijo;
 
     Promocion(int valor){
@@ -14,14 +14,14 @@ class Promocion implements Estado{
     }
 }
 
-class Nueva implements Estado{
+class Nueva implements EstadoPrenda{
 
     public int precioFinal(int precio){
         return precio;
     }
 }
 
-class Liquidacion implements Estado{
+class Liquidacion implements EstadoPrenda{
 
     public int precioFinal(int precio){
         return (precio/2);

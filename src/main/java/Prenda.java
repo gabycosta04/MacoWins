@@ -3,10 +3,10 @@ public interface Prenda{
 }
 
 class Pantalon implements Prenda{
-    Estado estadoActual;
+    EstadoPrenda estadoActual;
     int precioActual;
 
-    Pantalon(int precio,Estado estado){
+    Pantalon(int precio,EstadoPrenda estado){
         this.precioActual = precio;
         this.estadoActual = estado;
     }
@@ -18,10 +18,10 @@ class Pantalon implements Prenda{
 }
 
 class Camisa implements Prenda{
-    Estado estadoActual;
+    EstadoPrenda estadoActual;
     int precioActual;
 
-    Camisa(int precio,Estado estado){
+    Camisa(int precio,EstadoPrenda estado){
         this.precioActual = precio;
         this.estadoActual = estado;
     }
@@ -33,10 +33,10 @@ class Camisa implements Prenda{
 }
 
 class Saco implements Prenda{
-    Estado estadoActual;
+    EstadoPrenda estadoActual;
     int precioActual;
 
-    Saco(int precio,Estado estado){
+    Saco(int precio,EstadoPrenda estado){
         this.precioActual = precio;
         this.estadoActual = estado;
     }
