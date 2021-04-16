@@ -1,40 +1,41 @@
-# java-base-project
+# MACOWINS
 
-# Ejecutar tests
 
-```
-mvn test
-```
+Se requiere:
 
-# Validar el proyecto de forma exahustiva
+Identificar los requerimientos
+Presentar una solución usando el paradigma de objetos (pseudocódigo, diagrama de clases).
+Explicar todo lo que considere necesario en prosa.
+Si se descarta alguna alternativa durante el desarrollo de la solución, o si se tiene otra solución, explicarla brevemente.
 
-```
-mvn clean verify
-```
 
-Este comando hará lo siguiente:
+La conocida empresa de ropa formal para caballeros, Macowins, es capaz de darle soporte a la venta de prendas. Un fragmento de la grabación del analista con el cliente:
 
- 1. Ejecutará los tests
- 2. Validará las convenciones de formato mediante checkstyle
- 3. Detectará la presencia de (ciertos) code smells
- 4. Validará la cobertura del proyecto
+“Queremos saber el precio de venta de una prenda y sus tipos, los tipos de prenda son: sacos, pantalones, camisas.”
 
-# Entrega del proyecto
+El cálculo del precio de una prenda es, el precio propio de la prenda modificado según el estado de la prenda, que pueden ser:
+Nueva: en este caso no modifican el precio base.
+Promoción: Le resta un valor fijo decidido por el usuario.
+Liquidación: Es un 50% del valor del producto.
 
-Para entregar el proyecto, crear un tag llamado `entrega-final`. Es importante que antes de realizarlo se corra la validación
-explicada en el punto anterior. Se recomienda hacerlo de la siguiente forma:
+Ah, un requerimiento más: Macowins registra las ventas de estas prendas y necesita saber las ganancias de un determinado día. 
 
-```
-mvn clean verify && git tag entrega-final && git push origin HEAD --tags
-```
+“Cada venta tiene asociada las prendas que se vendieron, su cantidad y la fecha de venta. 
+Las ventas pueden ser en efectivo o con tarjeta. En el caso que sea con tarjeta, tienen el mismo comportamiento que en efectivo (el cual no modifica el precio), sólo que se le aplica un recargo según la cantidad de cuotas seleccionadas (cantidad de cuotas * un coeficiente fijo + 0.01 del valor de cada prenda).”
 
-# Configuración del IDE (IntelliJ)
 
- 1. Tabular con dos espacios: ![Screenshot_2021-04-09_18-23-26](https://user-images.githubusercontent.com/677436/114242543-73e1fe00-9961-11eb-9a61-7e34be9fb8de.png)
- 2. Instalar y configurar Checkstyle:
-    1. Instalar el plugin https://plugins.jetbrains.com/plugin/1065-checkstyle-idea:
-    2. Configurarlo activando los Checks de Google: ![Screenshot_2021-04-09_18-16-13](https://user-images.githubusercontent.com/677436/114242548-75132b00-9961-11eb-972e-28e6e1412979.png)
- 3. Usar fin de linea unix
-    1. En **Settings/Preferences**, ir a a **Editor | Code Style**.
-    2. En la lista **Line separator**, seleccionar `Unix and OS X (\n)`.
- ![Screenshot 2021-04-10 03-49-00](https://user-images.githubusercontent.com/11875266/114260872-c6490c00-99ad-11eb-838f-022acc1903f4.png)
+# Requerimentos identificados:
+
+Una prenda puede ser de los tipos: sacos, camisas, pantalones.
+Las prendas deben estar formadas tanto por su precio base como por su condicion/estado
+Cada estado de la prenda permite calcular el precio final de venta de la prenda de una manera diferente cada una.
+Una venta esta formada por un conjunto de prendas que son vendidas, por una fecha de venta y por el tipo de pago con el que se realizo la venta.
+De cada venta se puede saber la cantidad de prendas vendidas, la fecha de venta, y ademas el monto final que fue pagado (el cual ademas del precio de venta de cada prenda, tambien depende del metodo de pago utilizado).
+No se pueden agregar prendas repetidas al realizar una venta
+Cada metodo de pago permite calcular el precio final de una venta realizada de un conjunto de prendas, de una manera diferente cada una.
+
+
+# Modelado del programa (DIAGRAMA DE CLASES):
+
+![Im](modelo UML-Diagrama de clases.png "Diagrama de clases del Ejercicio Macowins realizado en LucidChart")
+
