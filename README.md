@@ -26,13 +26,13 @@ Las ventas pueden ser en efectivo o con tarjeta. En el caso que sea con tarjeta,
 
 # Requerimentos identificados:
 
-Una prenda puede ser de los tipos: sacos, camisas, pantalones.
-Las prendas deben estar formadas tanto por su precio base como por su condicion/estado
-Cada estado de la prenda permite calcular el precio final de venta de la prenda de una manera diferente cada una.
-Una venta esta formada por un conjunto de prendas que son vendidas, por una fecha de venta y por el tipo de pago con el que se realizo la venta.
-De cada venta se puede saber la cantidad de prendas vendidas, la fecha de venta, y ademas el monto final que fue pagado (el cual ademas del precio de venta de cada prenda, tambien depende del metodo de pago utilizado).
-No se pueden agregar prendas repetidas al realizar una venta
-Cada metodo de pago permite calcular el precio final de una venta realizada de un conjunto de prendas, de una manera diferente cada una.
+- Una prenda puede ser de los tipos: sacos, camisas, pantalones.
+- Las prendas deben estar formadas tanto por su precio base como por su condicion/estado
+- Cada estado de la prenda permite calcular el precio final de venta de la prenda de una manera diferente cada una.
+- Una venta esta formada por un conjunto de prendas que son vendidas, por una fecha de venta y por el tipo de pago con el que se realizo la venta.
+- De cada venta se puede saber la cantidad de prendas vendidas, la fecha de venta, y ademas el monto final que fue pagado (el cual ademas del precio de venta de cada prenda, tambien depende del metodo de pago utilizado).
+- No se pueden agregar prendas repetidas al realizar una venta
+- Cada metodo de pago permite calcular el precio final de una venta realizada de un conjunto de prendas, de una manera diferente cada una.
 
 
 # Modelado del programa (DIAGRAMA DE CLASES):
