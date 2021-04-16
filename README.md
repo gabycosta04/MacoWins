@@ -37,5 +37,5 @@ Cada metodo de pago permite calcular el precio final de una venta realizada de u
 
 # Modelado del programa (DIAGRAMA DE CLASES):
 
-![Im](modelo UML-Diagrama de clases.png "Diagrama de clases del Ejercicio Macowins realizado en LucidChart")
+![Im](modeloUML-DiagramaDeClases.png "Diagrama de clases del Ejercicio Macowins realizado en LucidChart")
 
